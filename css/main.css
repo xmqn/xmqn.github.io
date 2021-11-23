@@ -187,6 +187,7 @@ body {
 /* 비주얼 */
 .visual {
     position: relative;
+    height: 94.2rem;
     padding-top: 30rem;
     padding-bottom: 35.9rem;
 }
@@ -201,19 +202,21 @@ body {
     letter-spacing: -0.025rem;
     color: #616161;
 }
-.slogan-tit{
+
+.slogan-tit {
     position: relative;
     display: inline-block;
     color: #fff;
 
 }
+
 .slogan-tit::before {
     content: '';
     position: absolute;
-    left:  50%;
+    left: 50%;
     bottom: 1rem;
     transform: translateX(-50%);
-    width:  100%;
+    width: 100%;
     height: 7rem;
     background-color: #0030ff;
     z-index: -1;
@@ -239,15 +242,12 @@ body {
 
 }
 
-
 /* 프로필 */
 .profile {
     position: relative;
 }
 
-.profile .container {
-    padding-top: 5.4rem;
-}
+.profile .container {}
 
 .pro-tit {
     font-size: 3rem;
@@ -257,11 +257,7 @@ body {
     text-transform: uppercase;
     margin-left: 3.9rem;
     padding-top: 6.8rem;
-    padding-bottom: 5.6rem;
-}
-
-.pro-tit span {
-    color: #0030ff;
+    padding-bottom: 5.9rem;
 }
 
 .pro-up {
@@ -409,7 +405,7 @@ body {
     text-align: center;
 }
 
-.pro-down p >img {
+.pro-down p>img {
     display: inline-block;
     margin: 0 7.5rem;
     padding-top: 2rem;
@@ -418,6 +414,13 @@ body {
 /* 퍼블리싱 */
 .publ {
     position: relative;
+    height: 97rem;
+}
+
+.fa-square {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .publ-tit {
@@ -431,11 +434,15 @@ body {
     padding-bottom: 5.9rem;
 }
 
-.publ-tit span {
+.fa-square:before {
+    content: "\f0c8";
+    position: absolute;
+    top: 81px;
+    left: 0;
     color: #0030ff;
 }
 
-.swiper-container {
+.sw-publ {
     width: 100%;
     height: 100%;
 }
@@ -451,13 +458,13 @@ body {
     display: block;
     text-align: center;
 }
+
 .publ-box {
     position: relative;
     display: block;
     float: left;
     width: 32.9rem;
     height: 100%;
-    padding-bottom: 8.6rem;
 }
 
 .publ-box img {
@@ -466,7 +473,7 @@ body {
 
 .publ-box-tit {
     position: absolute;
-    top : 15rem;
+    top: 15rem;
     left: 3.6rem;
     font-size: 2.8rem;
     font-weight: 400;
@@ -482,6 +489,7 @@ body {
     display: block;
 
 }
+
 .sw-publ-prev {
     position: absolute;
     left: 17rem;
@@ -498,6 +506,7 @@ body {
     background-color: #1c1c1c;
     border: none;
 }
+
 .sw-publ-prev::before {
     content: '';
     position: relative;
@@ -523,6 +532,7 @@ body {
     background-color: #1c1c1c;
     border: none;
 }
+
 .sw-publ-next::before {
     content: '';
     position: relative;
@@ -531,11 +541,134 @@ body {
     height: 100%;
     background: url('../images/bt_next.png') center no-repeat;
 }
+
 /* 리디자인 */
 .rede {
     position: relative;
+    height: 97rem;
 }
 
+.rede-tit {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    margin-left: 3.9rem;
+    padding-top: 6.8rem;
+    /* padding-bottom: 5.9rem; */
+}
+
+.fa-square:before {
+    content: "\f0c8";
+    position: absolute;
+    top: 81px;
+    left: 0;
+    color: #0030ff;
+}
+
+.sw-rede {
+    width: 100%;
+    height: 97rem;
+}
+
+.sw-visual {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.rede-desc {
+    position: relative;
+    display: block;
+    width: 44rem;
+    padding-left: 9rem;
+}
+
+.rede-desc li {
+    padding-bottom: 3.3rem;
+}
+
+.rede-desc li>h2 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: -0.025rem;
+    color: #373737;
+    padding-top: 17.4rem;
+    padding-bottom: 6rem;
+}
+
+.rede-desc li>span {
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    color: ##979797;
+    line-height: 0.8;
+}
+
+.rede-desc li>p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    color: #373737;
+    line-height: 0.8;
+}
+
+.rede-desc li>b {
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    color: #373737;
+}
+
+.rede-desc-bt {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    color: #979797;
+    line-height: 0.8;
+    background-color: #fff;
+    padding: 1.2rem 3rem;
+    border: 0.2rem solid #979797;
+    margin: 1.5rem 0;
+}
+
+.rede-desc-bt:hover {
+    color: #fff;
+    background-color: #979797;
+    border: 0.2rem solid #979797;
+}
+
+.rede-mockup {
+    position: relative;
+    display: block;
+    width: 86rem;
+}
+
+.rede-mockup img {
+    position: absolute;
+    top: 12.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.sw-rede-pg {
+    bottom: 34.5rem;
+    left: 20.6rem;
+}
+
+.sw-rede-pg .swiper-pagination-bullet {
+    background-color: #ddd !important;
+    opacity: 1.0 !important;
+    margin: 0 0.3rem !important;
+}
+
+.sw-rede-pg .swiper-pagination-bullet-active {
+    background-color: #0030ff !important;
+}
 /* etc */
 .etc {
     position: relative;
