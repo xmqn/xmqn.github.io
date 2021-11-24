@@ -25,6 +25,8 @@ li {
 
 html {
     font-size: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -234,12 +236,8 @@ body {
     color: #0030ff;
 }
 
-.visual img {
-    position: absolute;
-    left: 33rem;
-    top: 32rem;
-    display: block;
-
+.slogan-name {
+    color: #1c1c1c !important;
 }
 
 /* 프로필 */
@@ -467,13 +465,33 @@ body {
     height: 100%;
 }
 
+.publ-box-desc {
+    height: 73.6rem;
+}
+
+.publ-box-wall {
+    position: absolute;
+    left:  0;
+    top:  0;
+    width:  100%;
+    height: 100%;
+    background-color: #0030ff;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.publ-box:hover .publ-box-wall{
+    opacity: 0.8;
+}
+
+
 .publ-box img {
     position: relative;
 }
 
 .publ-box-tit {
     position: absolute;
-    top: 15rem;
+    top: 10rem;
     left: 3.6rem;
     font-size: 2.8rem;
     font-weight: 400;
@@ -481,20 +499,74 @@ body {
     color: #fff;
 }
 
-.publ-box-desk {
+.publ-box-mockup {
     position: absolute;
+    top: -55rem;
+    left: 50%;
+    transform: translate(-50%, 2rem);
+    display: block;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.publ-box:hover .publ-box-mockup {
+    transform: translate(-50%, 0rem);
+    opacity: 1;
+}
+
+
+.publ-box p {
+    position: absolute;
+    top: 49rem;
     left: 50%;
     transform: translateX(-50%);
-    top: -47rem;
     display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
 
+.publ-box:hover p{
+    opacity: 1;
+}
+
+.publ-box-bt {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width:  100%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0;
+    white-space: nowrap;
+}
+
+.publ-box-bt-1 {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #fff;
+    background-color: #0030ff;
+    padding: 1rem 1rem;
+    border: 0.2rem solid #0030ff;
+    margin: 0.2rem 0.2rem;
+}
+
+.publ-box-bt-1:hover {
+    color: #0030ff;
+    background-color: #fff;
+    border: 0.2rem solid #fff;;
 }
 
 .sw-publ-prev {
     position: absolute;
-    left: 17rem;
-    top: 50%;
-    transform: translateX(-50%);
+    left: -13rem;
+    top: 55%;
     display: block;
     width: 4rem;
     height: 4rem;
@@ -518,9 +590,8 @@ body {
 
 .sw-publ-next {
     position: absolute;
-    right: 13rem;
-    top: 50%;
-    transform: translateX(-50%);
+    right: -13rem;
+    top: 55%;
     display: block;
     width: 4rem;
     height: 4rem;
@@ -598,6 +669,17 @@ body {
     padding-bottom: 6rem;
 }
 
+.rede-desc li>h2::after {
+    content: '';
+    position: absolute;
+    left: 9rem;
+    top: 23rem;
+    display: block;
+    width: 6.4rem;
+    height: 0.3rem;
+    background: #0030ff;
+}
+
 .rede-desc li>span {
     font-size: 1.8rem;
     font-weight: 400;
@@ -624,15 +706,15 @@ body {
 .rede-desc-bt {
     position: relative;
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: -0.01rem;
     color: #979797;
     line-height: 0.8;
     background-color: #fff;
-    padding: 1.2rem 3rem;
+    padding: 1.2rem 1.2rem;
     border: 0.2rem solid #979797;
-    margin: 1.5rem 0;
+    margin: 0.5rem 0;
 }
 
 .rede-desc-bt:hover {
@@ -655,6 +737,32 @@ body {
     display: block;
 }
 
+.sw-rede-control {}
+
+.sw-rede-prev {
+    position: absolute;
+    left: 16.3rem;
+    bottom: 34.3rem;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url('../images/bt_prev.png')no-repeat;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.sw-rede-next {
+    position: absolute;
+    left: 25.3rem;
+    bottom: 34.3rem;
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url('../images/bt_next.png')no-repeat;
+    cursor: pointer;
+    z-index: 999;
+}
+
 .sw-rede-pg {
     bottom: 34.5rem;
     left: 20.6rem;
@@ -669,9 +777,22 @@ body {
 .sw-rede-pg .swiper-pagination-bullet-active {
     background-color: #0030ff !important;
 }
+
 /* etc */
 .etc {
     position: relative;
+    height: 97rem;
+}
+
+.etc-tit {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    margin-left: 3.9rem;
+    padding-top: 6.8rem;
+    padding-bottom: 5.9rem;
 }
 
 /* 경험 */
