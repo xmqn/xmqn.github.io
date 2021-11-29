@@ -73,20 +73,19 @@ body {
 }
 
 .gotop {
-    position: absolute;
-    right: -7rem;
-    bottom: 30rem;
+    position: fixed;
+    right: 10rem;
+    bottom: 20rem;
     display: block;
     width: 5rem;
     height: 5rem;
     background-color: #fff;
     box-shadow: 0.1rem 0 0.8rem rgb(0 0 0 / 10%);
-    border: 0.1rem solid #e4e4e4;
+    border: 0.1rem solid #0030ff;
+    color: #0030ff;
     text-align: center;
-
     opacity: 0;
     visibility: hidden;
-
     transition: opacity 0.5s;
 }
 
@@ -95,24 +94,23 @@ body {
     visibility: visible;
 }
 
-.gotop i {
-    position: relative;
-    display: inline-block;
-    width: 1.2rem;
-    height: 1.5rem;
-    background: url('../images/ico_sprite_pc.png') no-repeat;
-    background-position: -37.1rem -5rem;
-    margin-top: 0.8rem;
-}
 
 .gotop span {
     position: relative;
     display: block;
     font-size: 1.2rem;
     font-weight: 700;
-    color: #333;
+    /* color: #0030ff; */
     letter-spacing: -0.05rem;
     line-height: 1.4;
+    text-align: center;
+    margin-top: 1.7rem
+}
+
+.gotop:hover {
+    background-color: #0030ff;
+    color: #fff;
+    transition: opacity 0.5s;
 }
 
 .wrap {
@@ -149,7 +147,7 @@ body {
 .depth1 {
     position: relative;
     display: block;
-    padding-left: 69.2rem;
+    padding-left: 60rem;
 }
 
 .depth1>li {
@@ -471,16 +469,16 @@ body {
 
 .publ-box-wall {
     position: absolute;
-    left:  0;
-    top:  0;
-    width:  100%;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
     background-color: #0030ff;
     opacity: 0;
     transition: opacity 0.5s;
 }
 
-.publ-box:hover .publ-box-wall{
+.publ-box:hover .publ-box-wall {
     opacity: 0.8;
 }
 
@@ -529,7 +527,7 @@ body {
     transition: opacity 0.5s;
 }
 
-.publ-box:hover p{
+.publ-box:hover p {
     opacity: 1;
 }
 
@@ -537,7 +535,7 @@ body {
     position: absolute;
     bottom: 2rem;
     left: 50%;
-    width:  100%;
+    width: 100%;
     transform: translateX(-50%);
     text-align: center;
     font-size: 0;
@@ -560,7 +558,8 @@ body {
 .publ-box-bt-1:hover {
     color: #0030ff;
     background-color: #fff;
-    border: 0.2rem solid #fff;;
+    border: 0.2rem solid #fff;
+    ;
 }
 
 .sw-publ-prev {
@@ -781,7 +780,7 @@ body {
 /* etc */
 .etc {
     position: relative;
-    height: 97rem;
+    height: 90rem;
 }
 
 .etc-tit {
@@ -795,12 +794,162 @@ body {
     padding-bottom: 5.9rem;
 }
 
+.etc-wrap {
+    position: relative;
+    display: block;
+}
+
+.etc-box {
+    margin: 0 3.5rem;
+}
+
+.etc-box>li {
+    width: 35rem;
+    height: 28rem;
+    float: left;
+    margin-bottom: 5rem;
+    margin-right: 5.9rem;
+    text-align: center;
+}
+
+.etc-box>li:last-child::after {
+    margin-right: 0;
+}
+
+.etc-box>li>a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.etc-desc {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: inline-block;
+    margin-top: 0.2rem;
+}
+
+.etc-txt {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #1c1c1c;
+    text-align: center;
+}
+
+
 /* 경험 */
 .experience {
     position: relative;
+    display: block;
+    height: 97rem;
+    padding-bottom: 5.5rem;
+}
+
+.exp-tit {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+    color: #1c1c1c;
+    text-transform: uppercase;
+    margin-left: 3.9rem;
+    padding-top: 6.8rem;
+    padding-bottom: 4.9rem;
+}
+
+.exp-box-up {
+    position: relative;
+    display: block;
+    height: 45rem;
+    margin-bottom: 5rem;
+}
+
+.exp-box-decs {
+    position: relative;
+    display: block;
+    width: 39rem;
+    height: 45rem;
+    float: left;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #1c1c1c;
+}
+
+.exp-box-decs > b {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: -0.025rem;
+}
+.exp-box-decs-1 {
+    margin:  2.8rem 0;
+    margin-left: 1rem;
+}
+
+.exp-box-decs-2 {
+    margin:  18rem 0;
+    margin-left: 17rem;
+    text-align: right;
+}
+
+.exp-box-down {
+    position: relative;
+    display: block;
+    float: left;
+    height: 45rem;
 }
 
 /* 컨택트 */
 .contact {
     position: relative;
+    display: block;
+    height: 50rem;
+    background-color: #bcbcbc;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+.cont-tit {
+    font-size: 8rem;
+    font-weight: 600;
+    letter-spacing: -0.025rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.cont-tit span {
+    color: #0030ff;
+}
+
+.cont-bt {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+}
+
+.cont-bt a {
+    position: relative;
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -0.01rem;
+    color: #0030ff;
+    line-height: 0.8;
+    background-color: #bcbcbc;
+    padding: 1.2rem 1.2rem;
+    border: 0.2rem solid #0030ff;
+    margin: 5rem 0;
+}
+
+.cont-bt a:hover {
+    background-color: #0030ff;
+    color: #fff;
+}
+.cont-copy {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: -0.025rem;
+    color: #fff;
+    text-align: center;
 }
