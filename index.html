@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="images/favicon_.ico">
-    <link rel="apple-touch-icon-precomposed" href="images/mobile_web_icon.png">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon_.ico">
     <meta name="viewport"
         content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Nayeong portfolio</title>
+    <title>박나영 portfolio</title>
     <script src="js/jquery.min.js"></script>
     <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -57,7 +57,7 @@
         <!-- 비주얼 -->
         <section class="visual">
             <div class="container">
-                <p class="slogan">
+                <p class="slogan" data-aos="fade-down">
                     <span class="slogan-tit">유연한 사고로 <b>소통</b>하는</span> <br>
                     <b>웹 퍼블리셔 <em>+</em> 디자이너</b><br>
                     <b class="slogan-name">박나영</b>입니다.
@@ -68,10 +68,10 @@
         <!-- 프로필 -->
         <section class="profile" id="about">
             <div class="container">
-                <i class="fas fa-square"></i>
-                <h2 class="pro-tit">ABOUT ME</h2>
+                <i class="fas fa-square" data-aos="fade-right"></i>
+                <h2 class="pro-tit" data-aos="fade-right">ABOUT ME</h2>
                 <div class="pro-up">
-                    <div class="pro-left left">
+                    <div class="pro-left left" data-aos="fade-right">
                     </div>
                     <div class="pro-right right">
                         <div class="pro-desc-1 left">
@@ -153,8 +153,8 @@
         <!-- 퍼블리싱 -->
         <section class="publ" id="publishing">
             <div class="container">
-                <i class="fas fa-square"></i>
-                <h2 class="publ-tit">PUBLIISHING</h2>
+                <i class="fas fa-square" data-aos="fade-right"></i>
+                <h2 class="publ-tit" data-aos="fade-right">PUBLIISHING</h2>
                 <div class="swiper-container sw-publ">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -270,22 +270,23 @@
         <!-- 리디자인 -->
         <section class="rede" id="redesign">
             <div class="container">
-                <i class="fas fa-square"></i>
-                <h2 class="rede-tit">REDESIGN</h2>
+                <i class="fas fa-square" data-aos="fade-right"></i>
+                <h2 class="rede-tit" data-aos="fade-right">REDESIGN</h2>
                 <div class="swiper-container sw-rede">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <ul class="rede-desc left">
                                 <li>
                                     <h2>PAUL BASSETT</h2>
-                                    <span> 기존 홈페이지가 스크롤 작동과 <br>
-                                        ㅇㅇㅇ가 다소 불편하여 ㅇㅇㅇㅇ 를 <br>
-                                        보완하여 리디자인 했습니다.<br>
+                                    <span> 기존 홈페이지가 스크롤과 <br>
+                                        버튼들이 작동시 불편하여 <br>
+                                        게시판과 기능 버튼들을 노출된<br>
+                                        방식으로 강화했습니다.
                                     </span>
                                 </li>
                                 <li>
                                     <p>
-                                        <b>Projiect</b> 폴바셋 웹사이트 리디자인<br>
+                                        <b>Project</b> 폴바셋 웹사이트 리디자인<br>
                                         <br>
                                         <b>Date</b> 2021.09<br>
                                         <br>
@@ -306,14 +307,14 @@
                             <ul class="rede-desc left">
                                 <li>
                                     <h2>LEEUM</h2>
-                                    <span> 기존 홈페이지가 스크롤 작동과 <br>
-                                        ㅇㅇㅇ가 다소 불편하여 ㅇㅇㅇㅇ 를 <br>
-                                        보완하여 리디자인 했습니다.<br>
+                                    <span> 기존 홈페이지가 전시에 대한 <br>
+                                        정보가 부족하여 필요한 메뉴를  <br>
+                                        찾기쉽게 보완했습니다.<br>
                                     </span>
                                 </li>
                                 <li>
                                     <p>
-                                        <b>Projiect</b> 리움 미술관 웹사이트 리디자인<br>
+                                        <b>Project</b> 리움 미술관 웹사이트 리디자인<br>
                                         <br>
                                         <b>Date</b> 2021.10<br>
                                         <br>
@@ -342,52 +343,58 @@
         <!-- etc-->
         <section class="etc" id="etc">
             <div class="container">
-                <i class="fas fa-square"></i>
-                <h2 class="etc-tit">ETC</h2>
+                <i class="fas fa-square" data-aos="fade-right"></i>
+                <h2 class="etc-tit" data-aos="fade-right">ETC</h2>
                 <div class="etc-wrap">
                     <ul class="etc-box clearfix">
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop" data-title="영화 포스터">
+                                <img src="images/etc1.png" alt="영화포스터">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 영화포스터 </span>
+                                </p>
+                            </a>
 
                         </li>
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc2/etc2.png" target="_blank" data-lightbox="photoshop" data-title="로고 디자인">
+                                <img src="images/etc2.png" alt="로고 디자인">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 로고디자인 </span>
+                                </p>
+                            </a>
                         </li>
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop" data-title="영화 포스터">
+                                <img src="images/etc1.png" alt="영화포스터">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 영화포스터 </span>
+                                </p>
+                            </a>
                         </li>
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop" data-title="영화 포스터">
+                                <img src="images/etc1.png" alt="영화포스터">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 영화포스터 </span>
+                                </p>
+                            </a>
                         </li>
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop" data-title="영화 포스터">
+                                <img src="images/etc1.png" alt="영화포스터">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 영화포스터 </span>
+                                </p>
+                            </a>
                         </li>
                         <li>
-                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop"
-                                data-title="영화 포스터"><img src="images/etc1.png" alt="영화포스터"></a>
-                            <p class="etc-desc">
-                                <span class="etc-txt"> 영화포스터 </span>
-                            </p>
+                            <a href="work/etc1/etc1.png" target="_blank" data-lightbox="photoshop" data-title="영화 포스터">
+                                <img src="images/etc1.png" alt="영화포스터">
+                                <p class="etc-desc">
+                                    <span class="etc-txt"> 영화포스터 </span>
+                                </p>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -396,18 +403,17 @@
         <!-- 경험-->
         <section class="experience" id="experience">
             <div class="container">
-                <i class="fas fa-square"></i>
-                <h2 class="exp-tit">EXPERIENCE</h2>
+                <i class="fas fa-square" data-aos="fade-right"></i>
+                <h2 class="exp-tit" data-aos="fade-right">EXPERIENCE</h2>
                 <div class="exp-box-up clearfix">
                     <img src="images/exp_1.png" alt="" class="left">
-                    <div class="exp-box-decs">
-                        <p class="exp-box-decs-1">
+                    <div class="exp-box-desc">
+                        <p class="exp-box-desc-1">
                             <b>Enjoy Cooperation</b> <br>
-                            알바로 들어간 학원일ㅇ르 <br>
-                            감사히 실장까지 ㄹㅇㄴㅇㄹㄴ <br>
-                            자ㅁㄴㄻㄴㅇㄹㄴㅇㄹㄴㅇㄹ
+                            아르바이트로 시작한 실장일은 <br>
+                            소통의 <br>
                         </p>
-                        <p class="exp-box-decs-2">
+                        <p class="exp-box-desc-2">
                             <b>Love Exhibition</b> <br>
                             주기적으로 서울에 큰 전시회나 <br>
                             지역아트페어에 관람을 갑니다. <br>
@@ -420,12 +426,14 @@
                 <div class="exp-box-down">
                     <img src="images/exp_3.png" alt="">
                     <img src="images/exp_4.png" alt="">
-                    <div class="exp-box-decs">
-                        <b>Make Charater</b> <br>
-                        평소 캐릭터 드로잉을 좋아합니다.<br>
-                        청년작가를 대상으로 전시 기회가 <br>
-                        생겨 기획부터 디피까지 팀원들과 <br>
-                        협업하여 진행했습니다.
+                    <div class="exp-box-desc">
+                        <p class="exp-box-desc-3">
+                            <b>Make Charater</b> <br>
+                            평소 캐릭터 드로잉을 좋아합니다.<br>
+                            청년작가를 대상으로 전시 기회가 <br>
+                            생겨 기획부터 디피까지 팀원들과 <br>
+                            협업하여 진행했습니다.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -433,14 +441,14 @@
         <!--컨택트-->
         <section class="contact" id="contact">
             <div class="container">
-                <p class="cont-tit">
+                <p class="cont-tit" data-aos="fade-down">
                     THANKS FOR <br>
                     <span>VISITHING!</span>
                 </p>
                 <div class="cont-bt">
-                    <a href="#">PDF</a>
-                    <a href="#">Git Hub</a>
-                    <a href="#">Kakao</a>
+                    <a href="#" target="_blank">PDF</a>
+                    <a href="https://github.com/xmqn" target="_blank">Git Hub</a>
+                    <a href="https://open.kakao.com/o/s5Fb9JMd" target="_blank">Kakao</a>
                 </div>
                 <p class="cont-copy">Copyright © 2021 웹디자이너 박나영 All right reserved<br>
                     본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.<br>

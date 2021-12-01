@@ -1,4 +1,6 @@
-window.load = function () {};
+window.onload = function () {
+    AOS.init();
+};
 $(document).ready(function () {
 
     $('.gotop').click(function () {
@@ -14,17 +16,7 @@ $(document).ready(function () {
             $('.gotop').removeClass('gotop-active');
         }
     });
-
-    $("body").niceScroll({
-        zindex: 9999,
-        cursoropacitymin: 0,
-        cursoropacitymax: 1,
-        cursorcolor: "#0030ff",
-        cursorwidth: "1rem",
-        scrollspeed: 80,
-        hidecursordelay: 3000
-    });
-
+    
 // 주메뉴이동
     var moveEl = $('.move');
     $.each(moveEl, function () {

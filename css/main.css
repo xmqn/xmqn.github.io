@@ -26,8 +26,38 @@ li {
 html {
     font-size: 10px;
     overflow-x: hidden;
-    overflow-y: hidden;
+    scrollbar-3dLight-Color: #efefef;
+    scrollbar-arrow-color: #dfdfdf;
+    scrollbar-base-color: #efefef;
+    scrollbar-Face-Color: #dfdfdf;
+    scrollbar-Track-Color: #efefef;
+    scrollbar-DarkShadow-Color: #efefef;
+    scrollbar-Highlight-Color: #efefef;
+    scrollbar-Shadow-Color: #efefef;
+    -ms-overflow-style: none;
 }
+
+/* SCROLL */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* 스크롤바의 width */
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+/* 스크롤바의 전체 배경색 */
+::-webkit-scrollbar-thumb {
+    background: #0030ff
+}
+
+/* 스크롤바 색 */
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
@@ -120,12 +150,18 @@ body {
 
 /* 헤더 */
 .header {
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 7.5rem;
+    z-index: 9999;
+    background-color: #fff;
     display: block;
+
 }
 
 .header .container {
-    /*height: 2.7rem;*/
     padding-top: 2.7rem;
 
 }
@@ -214,10 +250,10 @@ body {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: 1rem;
+    bottom: 0rem;
     transform: translateX(-50%);
     width: 100%;
-    height: 7rem;
+    height: 8rem;
     background-color: #0030ff;
     z-index: -1;
 }
@@ -780,7 +816,7 @@ body {
 /* etc */
 .etc {
     position: relative;
-    height: 90rem;
+    height: 97rem;
 }
 
 .etc-tit {
@@ -804,6 +840,7 @@ body {
 }
 
 .etc-box>li {
+    position: relative;
     width: 35rem;
     height: 28rem;
     float: left;
@@ -816,32 +853,47 @@ body {
     margin-right: 0;
 }
 
-.etc-box>li>a:hover {
+.etc-box>li:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 .etc-desc {
     position: absolute;
-    top: 50%;
     left: 0;
-    display: inline-block;
-    margin-top: 0.2rem;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: background 0.5s;
+    cursor: pointer;
+}
+.etc-box>li:hover .etc-desc {
+    background-color: rgba(0, 0, 0, 1.0);
 }
 
 .etc-txt {
-    font-size: 1.3rem;
-    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.8rem;
+    font-weight: 600;
     letter-spacing: -0.025rem;
-    color: #1c1c1c;
+    color: #fff;
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
+.etc-box>li:hover .etc-txt {
+    opacity: 1;
+}
 
 /* 경험 */
 .experience {
     position: relative;
     display: block;
-    height: 97rem;
     padding-bottom: 5.5rem;
 }
 
@@ -863,7 +915,7 @@ body {
     margin-bottom: 5rem;
 }
 
-.exp-box-decs {
+.exp-box-desc {
     position: relative;
     display: block;
     width: 39rem;
@@ -873,36 +925,59 @@ body {
     font-weight: 400;
     letter-spacing: -0.025rem;
     color: #1c1c1c;
+    white-space: nowrap;
 }
 
-.exp-box-decs > b {
-    font-size: 1.8rem;
+.exp-box-desc b {
+    position: relative;
+    display: block;
+    font-size: 2rem;
     font-weight: 500;
     letter-spacing: -0.025rem;
-}
-.exp-box-decs-1 {
-    margin:  2.8rem 0;
-    margin-left: 1rem;
+    color: #fff;
+    margin-bottom: -0.8rem;
 }
 
-.exp-box-decs-2 {
-    margin:  18rem 0;
-    margin-left: 17rem;
-    text-align: right;
+.exp-box-desc b::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: 0rem;
+    width:  100%;
+    height: 2.5rem;
+    background-color: #0030ff;
+    z-index: -1;
+    text-align: center;
+}
+
+.exp-box-desc-1 {
+    position: absolute;
+    left: 2rem;
+    top: 4rem;
+}
+
+.exp-box-desc-2 {
+    position: absolute;
+    left: 14.6rem;
+    top: 29rem;
 }
 
 .exp-box-down {
     position: relative;
     display: block;
-    float: left;
     height: 45rem;
+}
+
+.exp-box-desc-3 {
+    position: absolute;
+    left: 13rem;
+    top: 31rem;
 }
 
 /* 컨택트 */
 .contact {
     position: relative;
     display: block;
-    height: 50rem;
     background-color: #bcbcbc;
     padding-top: 10rem;
     padding-bottom: 10rem;
@@ -946,6 +1021,7 @@ body {
     background-color: #0030ff;
     color: #fff;
 }
+
 .cont-copy {
     font-size: 1.2rem;
     font-weight: 400;
