@@ -56,6 +56,10 @@ $(document).ready(function () {
             el: ".sw-rede-pg",
             clickable: true,
         },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         loop: true
     });
 });
